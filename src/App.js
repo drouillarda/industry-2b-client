@@ -1,11 +1,10 @@
 import './App.scss';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
-import HomePage from './pages/HomePage/HomePage';
-import Nav from './components/Nav/Nav';
-import Footer from './components/Footer/Footer';
+import { HomePage } from './pages/HomePage/HomePage';
+import { Nav } from './components/Nav/Nav';
+import { Footer } from './components/Footer/Footer';
 
-
-function App() {
+export function App() {
 
   return (
     <BrowserRouter>
@@ -20,5 +19,3 @@ function App() {
     </BrowserRouter>
   );
 }
-
-export default App;

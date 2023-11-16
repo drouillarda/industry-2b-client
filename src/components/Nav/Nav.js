@@ -1,7 +1,7 @@
-import "./Header.scss"
+import "./Nav.scss"
 import { Link } from "react-router-dom";
 
-const Nav = () => {
+export const Nav = () => {
     return (
         <header className="navbar">
             <nav className="navbar__container">
@@ -20,4 +20,3 @@ const Nav = () => {
         </header>
     );
 };
-export default Nav;
