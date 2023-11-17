@@ -1,9 +1,12 @@
 import './HomePage.scss';
 import { Card } from '../../components/Card/Card';
+import { Search } from '../../components/Search/Search';
 
 
 export function HomePage() {
     return <main className="home">
+        <Search />
+
         <Card
             title="Test Card"
             description="This is kind of an awkward, long test description for this card component."
