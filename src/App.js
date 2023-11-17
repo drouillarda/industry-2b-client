@@ -5,6 +5,7 @@ import { Nav } from './components/Nav/Nav';
 import { Footer } from './components/Footer/Footer';
 import { SearchPage } from './pages/SearchPage/SearchPage';
 import { useEffect, useState } from 'react';
+import { ListPage } from './pages/ListPage/ListPage';
 
 export function App() {
   const [titleList, setTitleList] = useState([]);
@@ -33,10 +34,12 @@ export function App() {
     <BrowserRouter>
       <Nav />
       <Routes>
-        <Route path="/" 
-        element={<HomePage titleList={titleList} handleAdd={handleAddTitle} />}/>
-        <Route path="/search" 
-        element={<SearchPage titleList={titleList} handleAdd={handleAddTitle} />}/>
+        <Route path="/"
+          element={<HomePage titleList={titleList} handleAdd={handleAddTitle} />} />
+        <Route path="/search"
+          element={<SearchPage titleList={titleList} handleAdd={handleAddTitle} />} />
+        <Route path="/mylist"
+          element={<ListPage />} />
       </Routes>
       <Footer />
     </BrowserRouter>
