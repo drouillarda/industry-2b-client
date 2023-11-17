@@ -9,7 +9,7 @@ export const Card = ({ title, backgroundUrl, description, handleAddButton, bigTe
   useEffect(() => {
     setTimeout(() => setNoAnimate(true), 500);
   }, []);
-  
+
   return (
     <article
       className={

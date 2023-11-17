@@ -7,6 +7,7 @@
     transform: translateX(-10rem);
     filter: opacity(0);
   }
+
   to {
     scale: 1;
     transform: translateX(0);
@@ -18,9 +19,11 @@
   0% {
     scale: 1;
   }
+
   15% {
     scale: 1.1;
   }
+
   100% {
     scale: 1;
   }
@@ -53,28 +56,33 @@
       opacity: 1;
     }
   }
+
   &__subheading {
     @include card-label;
     display: -webkit-box;
     -webkit-line-clamp: 3;
-    -webkit-box-orient: vertical;  
+    -webkit-box-orient: vertical;
     overflow: hidden;
     opacity: 0;
     width: fit-content;
     margin: auto;
     filter: drop-shadow(2px 4px 6px black);
   }
+
   &--big &__subheading {
     @include heading;
   }
+
   &--no-animate {
     animation: none;
   }
+
   &--in-list {
     filter: contrast(0.5);
     animation-name: just-added;
     animation-duration: 1s;
   }
+
   &__add-button {
     align-self: flex-end;
     transition: scale 0.1s ease-out;
