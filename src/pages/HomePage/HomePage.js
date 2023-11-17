@@ -1,17 +1,29 @@
 import './HomePage.scss';
-import { Card } from '../../components/Card/Card';
+import axios from "axios";
+import { useEffect, useState } from 'react';
+import { CardGrid } from '../../components/CardGrid/CardGrid';
 import { Search } from '../../components/Search/Search';
 
-
 export function HomePage() {
+    const [genres, setGenres] = useState([]);
+
+    useEffect(() => {
+        const fetchTitles = async () => {
+            const { data } = await axios.get(`${process.env.REACT_APP_BACKEND_URL}/api/titles`);
+            setGenres(data);
+        };
+
+        fetchTitles();
+    }, []);
+
     return <main className="home">
         <Search />
 
-        <Card
-            title="Test Card"
-            bigText={true}
-            // description="This is kind of an awkward, long test description for this card component."
-            backgroundUrl="https://www.thesoapopera.com/cdn/shop/products/The-Soap-Opera-Rubber-Ducks-Colors-Yellow_02cd30bb-0dbd-4fdc-8d7c-6ee1be5a04e8_590x.jpg?v=1613344659"
+        <CardGrid
+            heading="Browse Genres"
+            records={genres}
+            titleField="title"
+            imageField="image"
         />
     </main>
 }

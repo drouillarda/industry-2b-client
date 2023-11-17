@@ -2,6 +2,8 @@ $tablet-breakpoint: 768px;
 $desktop-breakpoint: 1280px;
 
 :root {
+  --site-padding: 1rem;
+
   --text-heading-size: 1.875rem;
   --text-subheading-size: 1.5rem;
   --text-card-label-size: 1.125rem;
@@ -11,6 +13,8 @@ $desktop-breakpoint: 1280px;
   --text-small-size: 0.875rem;
 
   @media (min-width: 768px) {
+    --site-padding: 1.5rem;
+
     --text-heading-size: 2.5rem;
     --text-subheading-size: 2rem;
     --text-card-label-size: 1.25rem;
@@ -20,6 +24,8 @@ $desktop-breakpoint: 1280px;
     --text-small-size: 1rem;
   }
 }
+
+$site-padding: var(--site-padding);
 
 $color-primary: #fdfefe;
 $color-highlight: #efe5f1;
