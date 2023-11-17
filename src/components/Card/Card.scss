@@ -1,6 +1,19 @@
 @use "../../styles/partials/variables" as *;
 @use "../../styles/partials/mixins" as *;
 
+@keyframes animate-in {
+  from {
+    scale: 0.5;
+    transform: translateX(-2rem);
+    filter: opacity(0);
+  }
+  to {
+    scale: 1;
+    transform: translateX(0);
+    filter: opacity(1);
+  }
+}
+
 @keyframes just-added {
   0% {
     scale: 1;
@@ -25,6 +38,9 @@
   width: 100%;
   cursor: pointer;
   transition: filter 0.2s ease-out;
+  animation-name: animate-in;
+  animation-duration: 0.2s;
+  animation-timing-function: ease-out;
   @include tablet {
     padding: 1.5rem;
   }
