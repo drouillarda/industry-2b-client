@@ -20,6 +20,7 @@
     }
 
     &__container {
+        @include letter;
         display: flex;
         padding: 0.8125rem;
         border: 0.1875rem solid $color-accent-secondary;

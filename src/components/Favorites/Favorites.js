@@ -5,7 +5,7 @@ export const Favorites = () => {
     return (
         <section className='favorites'>
             <h3>Are you done picking your favorites?</h3>
-            <Link to=""><button className='favorites__button'>View your list</button></Link>
+            <Link to="/list"><button className='favorites__button'>View your list</button></Link>
         </section>
     );
 };
