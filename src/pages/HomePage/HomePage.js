@@ -2,6 +2,7 @@ import './HomePage.scss';
 import axios from "axios";
 import { useEffect, useState } from 'react';
 import { CardGrid } from '../../components/CardGrid/CardGrid';
+import { Search } from '../../components/Search/Search';
 
 export function HomePage() {
     const [genres, setGenres] = useState([]);
@@ -16,6 +17,8 @@ export function HomePage() {
     }, []);
 
     return <main className="home">
+        <Search />
+
         <CardGrid
             heading="Browse Genres"
             records={genres}
