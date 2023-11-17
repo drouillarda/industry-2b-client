@@ -47,6 +47,9 @@
 
   &:hover {
     outline: 2px solid $color-accent-tertiary;
+    .card__subheading {
+      opacity: 1;
+    }
   }
   &__subheading {
     @include card-label;
@@ -54,6 +57,10 @@
     -webkit-line-clamp: 3;
     -webkit-box-orient: vertical;  
     overflow: hidden;
+    opacity: 0;
+    width: fit-content;
+    margin: auto;
+    filter: drop-shadow(2px 4px 6px black);
   }
   &--big &__subheading {
     @include heading;
@@ -69,6 +76,7 @@
   &__add-button {
     align-self: flex-end;
     transition: scale 0.1s ease-out;
+    filter: drop-shadow(2px 4px 6px black);
     &:hover {
       scale: 1.1;
       filter: brightness(1.2);

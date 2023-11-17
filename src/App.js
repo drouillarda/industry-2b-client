@@ -31,7 +31,7 @@ export function App() {
 
   return (
     <BrowserRouter>
-      <Nav />
+      <Nav titleList={titleList} />
       <Routes>
         <Route path="/" 
         element={<HomePage titleList={titleList} handleAdd={handleAddTitle} />}/>

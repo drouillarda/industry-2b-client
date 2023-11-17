@@ -14,7 +14,7 @@ export const Card = ({ title, backgroundUrl, description, handleAddButton, bigTe
       className={
         `card ${bigText ? "card--big" : ""} ${inList ? "card--in-list" : ""} ${noAnimate ? "card--no-animate" : ""}`
       }
-      style={backgroundUrl && { "--bg-image": `url("${backgroundUrl}")` }}
+      style={backgroundUrl && { "--bg-image": `url("${process.env.REACT_APP_BACKEND_URL}${backgroundUrl}")` }}
       onClick={handleAddButton}
     >
       <button type="button" className="card__add-button">
