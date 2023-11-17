@@ -14,7 +14,11 @@
   background-color: $color-image-fallback;
 
   &__subheading {
-    @include subheading;
+    @include card-label;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;  
+    overflow: hidden;
   }
   &--big &__subheading {
     @include heading;

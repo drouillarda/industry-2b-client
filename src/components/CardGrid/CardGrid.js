@@ -9,7 +9,7 @@ export const CardGrid = ({ heading, records, titleField, imageField }) => (
         <Card
           key={record.id}
           title={record[titleField]}
-          backgroundUrl={imageField}
+          backgroundUrl={record[imageField]}
           handleAddButton={() => {}}
         />)}
     </div>

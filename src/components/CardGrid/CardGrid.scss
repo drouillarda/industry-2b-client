@@ -4,6 +4,7 @@
 .grid {
   &__heading {
     @include subheading;
+    padding-bottom: 1rem;
   }
   &__grid {
     display: grid;
