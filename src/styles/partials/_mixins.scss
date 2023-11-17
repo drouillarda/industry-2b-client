@@ -22,6 +22,11 @@
   font-weight: bold;
 }
 
+@mixin card-label {
+  font-size: var(--text-card-label-size);
+  font-weight: bold;
+}
+
 @mixin body-text {
   font-size: var(--text-body-size);
 }

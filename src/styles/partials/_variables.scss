@@ -2,23 +2,20 @@ $tablet-breakpoint: 768px;
 $desktop-breakpoint: 1280px;
 
 :root {
-  --text-heading-size: 2rem;
+  --text-heading-size: 1.875rem;
   --text-subheading-size: 1.5rem;
-  --text-body-size: 1rem;
+  --text-card-label-size: 1.125rem;
+  --text-body-size: 1.25rem;
 
   @media (min-width: 768px) {
-    --text-heading-size: 3rem;
+    --text-heading-size: 2.5rem;
     --text-subheading-size: 2rem;
-    --text-body-size: 1rem;
+    --text-card-label-size: 1.25rem;
+    --text-body-size: 1.25rem;
   }
 }
 
-$PrimaryDark: #323232;
-$PrimaryGrey: #AFAFAF;
-$PrimaryBlue: #0095FF;
-$PrimaryWhite: #FFFFFF;
-
-$SecondaryBlack: #000000;
-$SecondaryBlue: #0065AD;
-$SecondaryGrey: #E1E1E1;
-$SecondaryWhite: #FAFAFA;
+$color-primary: #fdfefe;
+$color-highlight: #919191;
+$color-overlay: rgba($color-highlight, 50%);
+$color-main-gradient: linear-gradient(0deg, #1e082d, #430e49 25%, #541150 50%, #430e49 75%, #1e082d);
