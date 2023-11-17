@@ -24,7 +24,7 @@ export const MyList = ({ titleList, handleAdd }) => {
             />
 
             <h3 className="myList__subheading">Are you ready to see where to watch?</h3>
-            <Link to="/services"><button className='favorites__button'>Tell me where to watch</button></Link>
+            <Link to="/recommendations"><button className='favorites__button'>Tell me where to watch</button></Link>
         </section>
     );
 };

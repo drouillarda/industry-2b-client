@@ -52,9 +52,6 @@
   &:hover {
     outline: 2px solid $color-accent-tertiary;
     transform: translateY(-0.25rem);
-    .card__subheading {
-      opacity: 1;
-    }
   }
 
   &__subheading {
