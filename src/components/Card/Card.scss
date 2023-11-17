@@ -4,7 +4,7 @@
 @keyframes animate-in {
   from {
     scale: 0.5;
-    transform: translateX(-2rem);
+    transform: translateX(-10rem);
     filter: opacity(0);
   }
   to {
@@ -57,6 +57,9 @@
   }
   &--big &__subheading {
     @include heading;
+  }
+  &--no-animate {
+    animation: none;
   }
   &--in-list {
     filter: contrast(0.5);
