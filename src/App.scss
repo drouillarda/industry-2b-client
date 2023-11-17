@@ -2,4 +2,8 @@
 @use "./styles/partials/fonts";
 @use "./styles/partials/global";
 @use "./styles/partials/variables" as *;
-@use "./styles/partials/mixins" as *;
+
+#root {
+  min-height: 100svh;
+  background: $color-main-gradient;
+}
