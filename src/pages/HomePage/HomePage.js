@@ -19,8 +19,8 @@ export function HomePage({ titleList, handleAdd }) {
 
     return <main className="home">
         <h1 className="home__heading">Discover Platforms</h1>
-        <p className="home__copy">Personal recommendation for content streamers based on what you like to watch or
-            something like this......</p>
+        <p className="home__copy">Personal recommendations for content streaming services based on what you like. Start
+            adding titles here, or search for your favorites to get started.</p>
         <form className="home__search" action="/search"><Search /></form>
         <CardGrid
             heading="Popular Titles"
