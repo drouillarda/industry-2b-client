@@ -17,7 +17,7 @@ export function HomePage() {
     }, []);
 
     return <main className="home">
-        <Search />
+        <form action="/search"><Search /></form>
         <h1 className="home__heading">Header Placeholder</h1>
         <p className="home__copy">Personal recommendation for content streamers based on what you like to watch or
             something lik this......</p>
