@@ -3,6 +3,7 @@ import axios from "axios";
 import { useEffect, useState } from 'react';
 import { CardGrid } from '../../components/CardGrid/CardGrid';
 import { Search } from '../../components/Search/Search';
+import { Link } from 'react-router-dom';
 
 export function HomePage({ titleList, handleAdd }) {
     const [popularTitles, setPopularTitles] = useState([]);
@@ -17,9 +18,9 @@ export function HomePage({ titleList, handleAdd }) {
     }, []);
 
     return <main className="home">
-        <h1 className="home__heading">Header Placeholder</h1>
+        <h1 className="home__heading">Discover Platforms</h1>
         <p className="home__copy">Personal recommendation for content streamers based on what you like to watch or
-            something lik this......</p>
+            something like this......</p>
         <form className="home__search" action="/search"><Search /></form>
         <CardGrid
             heading="Popular Titles"
@@ -29,5 +30,6 @@ export function HomePage({ titleList, handleAdd }) {
             handleAddButton={handleAdd}
             titleList={titleList}
         />
+        <Link className="home__link" to="/recommendations"><button className="home__button">See recommendations</button></Link>
     </main>
 }
