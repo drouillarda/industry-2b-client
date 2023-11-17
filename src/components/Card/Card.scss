@@ -30,6 +30,7 @@
 }
 
 .card {
+  position: relative;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -45,6 +46,7 @@
   animation-duration: 0.2s;
   animation-timing-function: ease-out;
   box-shadow: 2px 4px 20px rgba(black, 50%);
+  overflow: hidden;
   @include tablet {
     padding: 1.5rem;
   }
@@ -52,6 +54,10 @@
   &:hover {
     outline: 2px solid $color-accent-tertiary;
     transform: translateY(-0.25rem);
+
+    .card__video {
+      opacity: 1;
+    }
   }
 
   &__subheading {
@@ -75,12 +81,14 @@
   }
 
   &--in-list {
-    filter: contrast(0.5);
+    filter: contrast(0.6);
     animation-name: just-added;
     animation-duration: 1s;
   }
 
   &__add-button {
+    position: relative;
+    z-index: 2;
     align-self: flex-end;
     transition: scale 0.1s ease-out;
     filter: drop-shadow(2px 4px 6px rgba(black, 50%));
@@ -88,5 +96,17 @@
       scale: 1.1;
       filter: brightness(1.2);
     }
+  }
+
+  &__video {
+    position: absolute;
+    z-index: 1;
+    inset: 0;
+    max-width: 100%;
+    aspect-ratio: 27 / 40;
+    object-fit: cover;
+    object-position: center;
+    opacity: 0;
+    transition: opacity 0.3s ease-out;
   }
 }

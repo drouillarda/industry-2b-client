@@ -7,7 +7,6 @@ export function RecommendationsPage({ titleList }) {
     const [services, setServices] = useState([]);
 
     useEffect(() => {
-        console.log(titleList);
         const fetchServices = async () => {
             const titleCounts = {};
             for(let i = 0; i < titleList.length; i++) {
