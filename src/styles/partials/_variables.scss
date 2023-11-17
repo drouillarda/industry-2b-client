@@ -10,6 +10,7 @@ $desktop-breakpoint: 1280px;
   --text-search-size: 1rem;
   --text-body-size: 1.25rem;
   --text-nav-size: 1.25rem;
+  --text-bodysmall-size: 1rem;
   --text-small-size: 0.875rem;
 
   @media (min-width: 768px) {
@@ -20,6 +21,7 @@ $desktop-breakpoint: 1280px;
     --text-card-label-size: 1.25rem;
     --text-search-size: 1rem;
     --text-body-size: 1.25rem;
+    --text-bodysmall-size: 1rem;
     --text-nav-size: 1.25rem;
     --text-small-size: 1rem;
   }
