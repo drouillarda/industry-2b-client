@@ -35,7 +35,7 @@ export function RecommendationsPage({ titleList }) {
             <article>
             <div className="recommendations__platform">
                 {!!services.length &&(
-                services.map((service, index) =>
+                services.sort((a, b) => b.count - a.count).map((service, index) =>
                 <div key={service.id} className="recommendations__platform--container">
                     <div className="recommendations__platform--top">
                         <p>#{index + 1}</p>
