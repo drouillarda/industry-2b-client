@@ -12,6 +12,16 @@
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 1rem;
+    max-width: 35rem;
+    margin: auto;
+    @include tablet {
+      max-width: 50rem;
+      grid-template-columns: repeat(3, 1fr);
+    @include desktop {
+      max-width: 65rem;
+      grid-template-columns: repeat(4, 1fr);
+    }
+    }
     &--single {
       padding: 0 2rem;
       grid-template-columns: 1fr;
