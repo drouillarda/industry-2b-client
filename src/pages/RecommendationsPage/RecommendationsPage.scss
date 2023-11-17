@@ -57,6 +57,7 @@
         &--img {
             max-height: 7rem;
             max-width: 7rem;
+            width: 100%;
             margin: 0 30% 0 auto;
             @include tablet {
                 margin: 0;
