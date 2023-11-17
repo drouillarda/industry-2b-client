@@ -9,12 +9,10 @@ export function App() {
   return (
     <BrowserRouter>
       <Nav />
-        <Routes>
-          <Route path="/" 
-          element={<>
-          <HomePage />
-          </>}/>
-        </Routes>
+      <Routes>
+        <Route path="/" 
+        element={<HomePage />}/>
+      </Routes>
       <Footer />
     </BrowserRouter>
   );

@@ -11,3 +11,17 @@
     @content;
   }
 }
+
+@mixin heading {
+  font-size: var(--text-heading-size);
+  font-weight: bold;
+}
+
+@mixin subheading {
+  font-size: var(--text-subheading-size);
+  font-weight: bold;
+}
+
+@mixin body-text {
+  font-size: var(--text-body-size);
+}
