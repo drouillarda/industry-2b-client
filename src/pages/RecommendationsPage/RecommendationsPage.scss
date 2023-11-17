@@ -25,6 +25,15 @@
         display: flex;
         flex-direction: column;
         gap: 4rem;
+        &--container {
+            @include desktop {
+                display: flex;
+                flex-direction: row;
+                margin: 0 auto 0 auto;
+                width: 70vw;
+                justify-content: space-between;
+            }
+        }
         &--top {
             display: flex;
             flex-direction: row;
