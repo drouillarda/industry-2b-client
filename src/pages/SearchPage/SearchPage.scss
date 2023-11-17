@@ -1,0 +1,18 @@
+@use "../../styles/partials/variables" as *;
+@use "../../styles/partials/mixins" as *;
+
+.searchResults {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    gap: .5rem;
+    padding-bottom: 4rem;
+    h1 {
+        font-size: var(--text-heading-size);
+    }
+    h3 {
+        font-size: var(--text-small-size);
+    }
+}
