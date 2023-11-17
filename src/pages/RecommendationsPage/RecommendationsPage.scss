@@ -2,6 +2,7 @@
 @use "../../styles/partials/mixins" as *;
 
 .recommendations {
+    @include letter;
     display: flex;
     flex-direction: column;
     padding-top: .5rem;
@@ -28,6 +29,9 @@
             display: flex;
             flex-direction: row;
             padding-bottom: 1rem;
+            @include tablet {
+                justify-content: center;
+            }
             p {
                 @include card-label;
                 line-height: 1;
@@ -39,9 +43,16 @@
             max-height: 7rem;
             max-width: 7rem;
             margin: 0 30% 0 auto;
+            @include tablet {
+                margin: 0;
+            }
         }
         &--text {
             padding-bottom: 1rem;
+            @include tablet {
+                display: grid;
+                place-items: center;
+            }
         }
         &--name {
             font-weight: 600;
