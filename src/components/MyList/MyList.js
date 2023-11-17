@@ -1,6 +1,5 @@
 import './MyList.scss';
 import { CardGrid } from '../CardGrid/CardGrid';
-import { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 
 export const MyList = ({ titleList, handleAdd }) => {
