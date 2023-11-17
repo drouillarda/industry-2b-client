@@ -5,13 +5,15 @@
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  padding: 5%;
+  padding: 1rem;
   aspect-ratio: 1 / 1.3;
-  background: no-repeat var(--bg-image);
-  background-size: cover;
-  background-position: center;
+  background:  center / cover no-repeat var(--bg-image);
   border-radius: 5%;
   background-color: rgba($color-image-fallback, 83%);
+  width: 100%;
+  @include tablet {
+    padding: 1.5rem;
+  }
 
   &__subheading {
     @include card-label;

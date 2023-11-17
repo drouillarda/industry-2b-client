@@ -15,9 +15,12 @@
   }
   &__copy {
     text-align: center;
-    padding-bottom: 1rem;
+    padding-bottom: 0.5rem;
     @include tablet {
       text-align: inital;
     }
+  }
+  &__search {
+    padding-bottom: 1rem;
   }
 }
