@@ -1,0 +1,15 @@
+@use "../../styles/partials/variables" as *;
+@use "../../styles/partials/mixins" as *;
+
+.card {
+  background: no-repeat var(--bg-image);
+  background-size: cover;
+  background-position: center;
+
+  &__heading {
+    @include heading;
+  }
+  &__subheading {
+    @include subheading;
+  }
+}
