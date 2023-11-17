@@ -38,8 +38,8 @@ export function App() {
           element={<HomePage titleList={titleList} handleAdd={handleAddTitle} />} />
         <Route path="/search"
           element={<SearchPage titleList={titleList} handleAdd={handleAddTitle} />} />
-        <Route path="/mylist"
-          element={<ListPage />} />
+        <Route path="/list"
+          element={<ListPage titleList={titleList} handleAdd={handleAddTitle} />} />
       </Routes>
       <Footer />
     </BrowserRouter>

@@ -7,6 +7,7 @@
     transform: translateX(-10rem);
     filter: opacity(0);
   }
+
   to {
     scale: 1;
     transform: translateX(0);
@@ -18,9 +19,11 @@
   0% {
     scale: 1;
   }
+
   15% {
     scale: 1.1;
   }
+
   100% {
     scale: 1;
   }
@@ -32,7 +35,7 @@
   justify-content: space-between;
   padding: 1rem;
   aspect-ratio: 1 / 1.3;
-  background:  center / cover no-repeat var(--bg-image);
+  background: center / cover no-repeat var(--bg-image);
   border-radius: 5%;
   background-color: rgba($color-image-fallback, 83%);
   width: 100%;
@@ -41,6 +44,7 @@
   animation-name: animate-in;
   animation-duration: 0.2s;
   animation-timing-function: ease-out;
+
   @include tablet {
     padding: 1.5rem;
   }
@@ -48,27 +52,33 @@
   &:hover {
     outline: 2px solid $color-accent-tertiary;
   }
+
   &__subheading {
     @include card-label;
     display: -webkit-box;
     -webkit-line-clamp: 3;
-    -webkit-box-orient: vertical;  
+    -webkit-box-orient: vertical;
     overflow: hidden;
   }
+
   &--big &__subheading {
     @include heading;
   }
+
   &--no-animate {
     animation: none;
   }
+
   &--in-list {
     filter: contrast(0.5);
     animation-name: just-added;
     animation-duration: 1s;
   }
+
   &__add-button {
     align-self: flex-end;
     transition: scale 0.1s ease-out;
+
     &:hover {
       scale: 1.1;
       filter: brightness(1.2);

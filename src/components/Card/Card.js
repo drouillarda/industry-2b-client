@@ -8,7 +8,7 @@ export const Card = ({ title, backgroundUrl, description, handleAddButton, bigTe
   useEffect(() => {
     setTimeout(() => setNoAnimate(true), 500);
   }, []);
-  
+
   return (
     <article
       className={
@@ -17,7 +17,7 @@ export const Card = ({ title, backgroundUrl, description, handleAddButton, bigTe
       style={backgroundUrl && { "--bg-image": `url("${backgroundUrl}")` }}
       onClick={handleAddButton}
     >
-      <button type="button" className="card__add-button">
+      <button type="button" className={"card__add-button card__minus-button"}>
         <img src={addIcon} alt="A plus sign, representing adding to your list." />
       </button>
       <h3 className="card__subheading">{title}</h3>
