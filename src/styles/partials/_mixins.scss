@@ -27,6 +27,16 @@
   font-weight: bold;
 }
 
+@mixin search-text {
+  font-size: var(--text-search-size);
+  font-weight: bold;
+  color: $color-accent;
+}
+
 @mixin body-text {
   font-size: var(--text-body-size);
+}
+
+@mixin small-text {
+  font-size: var(--text-small-size);
 }
