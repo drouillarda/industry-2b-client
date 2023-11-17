@@ -17,10 +17,10 @@ export function HomePage() {
     }, []);
 
     return <main className="home">
-        <form action="/search"><Search /></form>
         <h1 className="home__heading">Header Placeholder</h1>
         <p className="home__copy">Personal recommendation for content streamers based on what you like to watch or
             something lik this......</p>
+        <form className="home__search" action="/search"><Search /></form>
         <CardGrid
             heading="Popular Titles"
             records={popularTitles}
