@@ -27,6 +27,8 @@ export const CardGrid = ({ heading, records, titleField, imageField, handleAddBu
           backgroundUrl={record[imageField]}
           handleAddButton={() => handleAddButton(record)}
           inList={titleList.map(entry => entry.id).includes(record.id)} />).slice(0, quantityToShow)}
+        {quantityToShow < records.length && [...Array(records.length - quantityToShow).keys()]
+          .map(i => <div key={i} className="grid__placeholder"></div>)}
       </div>
     </section>
   );
