@@ -38,6 +38,10 @@
   font-size: var(--text-body-size);
 }
 
+@mixin nav-text {
+  font-size: var(--text-nav-size);
+}
+
 @mixin small-text {
   font-size: var(--text-small-size);
 }
