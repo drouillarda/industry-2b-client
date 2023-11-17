@@ -1,0 +1,23 @@
+@use "../../styles/partials/variables" as *;
+@use "../../styles/partials/mixins" as *;
+
+.favorites {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-top: 3rem;
+    gap: 1.5rem;
+    h3 {
+        font-size: var(--text-nav-size);
+    }
+    &__button {
+        padding: .5rem;
+        width: 9rem;
+        font-size: var(--text-nav-size);
+        font-weight: 600;
+        border: 2px solid;
+        border-radius: .75rem;
+        border-color: $color-highlight;
+    }
+}
