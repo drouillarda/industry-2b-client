@@ -5,6 +5,7 @@ import { Nav } from './components/Nav/Nav';
 import { Footer } from './components/Footer/Footer';
 import { SearchPage } from './pages/SearchPage/SearchPage';
 import { useEffect, useState } from 'react';
+import { RecommendationsPage } from './pages/RecommendationsPage/RecommendationsPage';
 
 export function App() {
   const [titleList, setTitleList] = useState([]);
@@ -37,6 +38,8 @@ export function App() {
         element={<HomePage titleList={titleList} handleAdd={handleAddTitle} />}/>
         <Route path="/search" 
         element={<SearchPage titleList={titleList} handleAdd={handleAddTitle} />}/>
+        <Route path="/recommendations"
+        element={<RecommendationsPage titleList={titleList}  />}/>
       </Routes>
       <Footer />
     </BrowserRouter>
