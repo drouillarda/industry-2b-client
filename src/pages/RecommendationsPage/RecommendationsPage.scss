@@ -1,0 +1,95 @@
+@use "../../styles/partials/variables" as *;
+@use "../../styles/partials/mixins" as *;
+
+.recommendations {
+    @include letter;
+    display: flex;
+    flex-direction: column;
+    padding-top: .5rem;
+    gap: 4rem;
+    line-height: 1.75;
+    h1 {
+        font-size: var(--text-heading-size);
+        padding-bottom: .5rem;
+    }
+    p {
+        font-size: var(--text-small-size);
+        padding: 0 1.25em 0 1.25rem;
+        @include desktop {
+            padding-left: 0;
+        }
+    }
+    &__heading {
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+    }
+    &__platform {
+        display: flex;
+        flex-direction: column;
+        gap: 4rem;
+        &--container {
+            @include desktop {
+                display: flex;
+                flex-direction: row;
+                margin: 0 auto 0 auto;
+                width: 100%;
+                justify-content: space-between;
+            }
+        }
+        &--top {
+            display: flex;
+            flex-direction: row;
+            padding-bottom: 1rem;
+            @include tablet {
+                justify-content: center;
+                @include desktop {
+                    padding-bottom: 0;
+                }
+            }
+            p {
+                @include card-label;
+                line-height: 1;
+                display: grid;
+                place-items: center;
+            }
+        }
+        &--img {
+            max-height: 7rem;
+            max-width: 7rem;
+            margin: 0 30% 0 auto;
+            @include tablet {
+                margin: 0;
+            }
+        }
+        &--text {
+            padding-bottom: 1rem;
+            @include tablet {
+                display: grid;
+                place-items: center;
+                @include desktop {
+                    padding-bottom: 0;
+                }
+            }
+        }
+        &--name {
+            font-weight: 600;
+        }
+        &--bottom {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        &--button {
+            @include button;
+        }
+    }
+    &__footer {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        &--button {
+            @include button;
+        }
+    }
+}

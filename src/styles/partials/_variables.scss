@@ -1,0 +1,45 @@
+$tablet-breakpoint: 768px;
+$desktop-breakpoint: 1280px;
+
+:root {
+  --site-padding: 1rem;
+  --letter-width: 35rem;
+
+  --text-heading-size: 1.875rem;
+  --text-subheading-size: 1.5rem;
+  --text-card-label-size: 1.125rem;
+  --text-search-size: 1rem;
+  --text-body-size: 1.25rem;
+  --text-nav-size: 1.25rem;
+  --text-bodysmall-size: 1rem;
+  --text-small-size: 0.875rem;
+
+  @media (min-width: $tablet-breakpoint) {
+    --site-padding: 1.5rem;
+    --letter-width: 50rem;
+
+    --text-heading-size: 2.5rem;
+    --text-subheading-size: 2rem;
+    --text-card-label-size: 1.25rem;
+    --text-search-size: 1rem;
+    --text-body-size: 1.25rem;
+    --text-bodysmall-size: 1rem;
+    --text-nav-size: 1.25rem;
+    --text-small-size: 1rem;
+  }
+
+  @media (min-width: $desktop-breakpoint) {
+    --letter-width: 65rem;
+  }
+}
+
+$site-padding: var(--site-padding);
+$letter-width: var(--letter-width);
+
+$color-primary: #fdfefe;
+$color-highlight: #efe5f1;
+$color-image-fallback: #dde1e6;
+$color-accent: #430e49;
+$color-accent-secondary: #a046af;
+$color-accent-tertiary: #a96ba6;
+$color-main-gradient: linear-gradient(0deg, #1e082d, #430e49 25%, #541150 50%, #430e49 75%, #1e082d);

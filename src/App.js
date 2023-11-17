@@ -1,25 +1,51 @@
-import logo from './logo.svg';
-import './App.css';
+import './App.scss';
+import { BrowserRouter, Route, Routes } from 'react-router-dom';
+import { HomePage } from './pages/HomePage/HomePage';
+import { Nav } from './components/Nav/Nav';
+import { Footer } from './components/Footer/Footer';
+import { SearchPage } from './pages/SearchPage/SearchPage';
+import { useEffect, useState } from 'react';
+import { RecommendationsPage } from './pages/RecommendationsPage/RecommendationsPage';
+import { ListPage } from './pages/ListPage/ListPage';
 
-function App() {
+
+export function App() {
+  const [titleList, setTitleList] = useState([]);
+
+  const handleAddTitle = title => {
+    const localStorageListRaw = localStorage.getItem("titleList") || "[]";
+    const localStorageList = JSON.parse(localStorageListRaw);
+
+    if (!localStorageList.map(entry => entry.id).includes(title.id)) {
+      localStorageList.push(title);
+      setTitleList([...localStorageList]);
+      localStorage.setItem("titleList", JSON.stringify(localStorageList));
+    } else {
+      const filteredList = localStorageList.filter(entry => entry.id !== title.id);
+      localStorage.setItem("titleList", JSON.stringify(filteredList));
+      setTitleList([...filteredList]);
+    }
+  }
+
+  useEffect(() => {
+    const localStorageListRaw = localStorage.getItem("titleList");
+    localStorageListRaw && setTitleList(JSON.parse(localStorageListRaw));
+  }, []);
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <BrowserRouter>
+      <Nav titleList={titleList} />
+      <Routes>
+        <Route path="/" 
+        element={<HomePage titleList={titleList} handleAdd={handleAddTitle} />}/>
+        <Route path="/search" 
+        element={<SearchPage titleList={titleList} handleAdd={handleAddTitle} />}/>
+        <Route path="/list"
+        element={<ListPage titleList={titleList} handleAdd={handleAddTitle} />} />
+        <Route path="/recommendations"
+        element={<RecommendationsPage titleList={titleList}  />}/>
+      </Routes>
+      <Footer />
+    </BrowserRouter>
   );
 }
-
-export default App;

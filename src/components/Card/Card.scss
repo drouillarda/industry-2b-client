@@ -1,0 +1,112 @@
+@use "../../styles/partials/variables" as *;
+@use "../../styles/partials/mixins" as *;
+
+@keyframes animate-in {
+  from {
+    scale: 0.5;
+    transform: translateX(-10rem);
+    filter: opacity(0);
+  }
+
+  to {
+    scale: 1;
+    transform: translateX(0);
+    filter: opacity(1);
+  }
+}
+
+@keyframes just-added {
+  0% {
+    scale: 1;
+  }
+
+  15% {
+    scale: 1.1;
+  }
+
+  100% {
+    scale: 1;
+  }
+}
+
+.card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 1rem;
+  aspect-ratio: 27 / 40;
+  background:  center / cover no-repeat var(--bg-image);
+  border-radius: 5%;
+  background-color: rgba($color-image-fallback, 83%);
+  width: 100%;
+  cursor: pointer;
+  transition: filter 0.2s ease-out, transform 0.2s ease-out;
+  animation-name: animate-in;
+  animation-duration: 0.2s;
+  animation-timing-function: ease-out;
+  box-shadow: 2px 4px 20px rgba(black, 50%);
+  overflow: hidden;
+  @include tablet {
+    padding: 1.5rem;
+  }
+
+  &:hover {
+    outline: 2px solid $color-accent-tertiary;
+    transform: translateY(-0.25rem);
+
+    .card__video {
+      opacity: 1;
+    }
+  }
+
+  &__subheading {
+    @include card-label;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    opacity: 0;
+    width: fit-content;
+    margin: auto;
+    filter: drop-shadow(2px 4px 6px black);
+  }
+
+  &--big &__subheading {
+    @include heading;
+  }
+
+  &--no-animate {
+    animation: none;
+  }
+
+  &--in-list {
+    filter: contrast(0.6);
+    animation-name: just-added;
+    animation-duration: 1s;
+  }
+
+  &__add-button {
+    position: relative;
+    z-index: 2;
+    align-self: flex-end;
+    transition: scale 0.1s ease-out;
+    filter: drop-shadow(2px 4px 6px rgba(black, 50%));
+    &:hover {
+      scale: 1.1;
+      filter: brightness(1.2);
+    }
+  }
+
+  &__video {
+    position: absolute;
+    z-index: 1;
+    inset: 0;
+    max-width: 100%;
+    aspect-ratio: 27 / 40;
+    object-fit: cover;
+    object-position: center;
+    opacity: 0;
+    transition: opacity 0.3s ease-out;
+  }
+}

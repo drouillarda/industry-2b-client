@@ -1,0 +1,56 @@
+@use "../../styles/partials/variables" as *;
+@use "../../styles/partials/mixins" as *;
+
+.grid {
+  width: 100%;
+
+  &__heading {
+    @include subheading;
+    @include letter;
+    padding-bottom: 3rem;
+  }
+
+  &__grid {
+    @include letter;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: $site-padding;
+
+    @include tablet {
+      grid-template-columns: repeat(3, 1fr);
+    }
+
+    @include desktop {
+      grid-template-columns: repeat(4, 1fr);
+    }
+
+    &--single {
+      grid-template-columns: 1fr;
+      max-width: calc($letter-width / 2);
+
+      @include tablet {
+        max-width: calc($letter-width / 3);
+      }
+
+      @include desktop {
+        max-width: calc($letter-width / 4);
+      }
+    }
+
+    &--list {
+      grid-template-columns: 1fr;
+      max-width: calc($letter-width / 2);
+      gap: 6rem;
+
+      @include desktop {
+        max-width: $letter-width;
+        grid-template-columns: repeat(4, 1fr);
+        gap: $site-padding;
+      }
+    }
+  }
+
+  &__placeholder {
+    aspect-ratio: 27 / 40;
+  }
+}

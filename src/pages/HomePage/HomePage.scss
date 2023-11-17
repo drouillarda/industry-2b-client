@@ -1,0 +1,34 @@
+@use "../../styles/partials/variables" as *;
+@use "../../styles/partials/mixins" as *;
+
+.home {
+  display: grid;
+  gap: 2rem;
+
+  &__heading {
+    @include heading;
+    text-align: center;
+    padding-top: 2rem;
+    @include tablet {
+      text-align: inital;
+    }
+  }
+  &__copy {
+    @include letter;
+    text-align: center;
+    padding-bottom: 0.5rem;
+    @include tablet {
+      text-align: inital;
+    }
+  }
+  &__search {
+    padding-bottom: 1rem;
+  }
+  &__button {
+    @include button;
+  }
+  &__link {
+    width: fit-content;
+    margin: auto;
+  }
+}
