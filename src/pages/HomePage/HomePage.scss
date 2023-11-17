@@ -1,2 +1,23 @@
 @use "../../styles/partials/variables" as *;
 @use "../../styles/partials/mixins" as *;
+
+.home {
+  display: grid;
+  gap: 2rem;
+
+  &__heading {
+    @include heading;
+    text-align: center;
+    padding-top: 2rem;
+    @include tablet {
+      text-align: inital;
+    }
+  }
+  &__copy {
+    text-align: center;
+    padding-bottom: 1rem;
+    @include tablet {
+      text-align: inital;
+    }
+  }
+}

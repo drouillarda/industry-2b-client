@@ -5,12 +5,12 @@ import { CardGrid } from '../../components/CardGrid/CardGrid';
 import { Search } from '../../components/Search/Search';
 
 export function HomePage() {
-    const [genres, setGenres] = useState([]);
+    const [popularTitles, setPopularTitles] = useState([]);
 
     useEffect(() => {
         const fetchTitles = async () => {
-            const { data } = await axios.get(`${process.env.REACT_APP_BACKEND_URL}/api/titles`);
-            setGenres(data);
+            const { data } = await axios.get(`${process.env.REACT_APP_BACKEND_URL}/api/titles/popular/8`);
+            setPopularTitles(data);
         };
 
         fetchTitles();
@@ -18,12 +18,14 @@ export function HomePage() {
 
     return <main className="home">
         <Search />
-
+        <h1 className="home__heading">Header Placeholder</h1>
+        <p className="home__copy">Personal recommendation for content streamers based on what you like to watch or
+            something lik this......</p>
         <CardGrid
-            heading="Browse Genres"
-            records={genres}
+            heading="Popular Titles"
+            records={popularTitles}
             titleField="title"
-            imageField="image"
+            imageField="img"
         />
     </main>
 }
