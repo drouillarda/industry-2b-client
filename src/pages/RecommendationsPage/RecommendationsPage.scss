@@ -6,6 +6,7 @@
     flex-direction: column;
     padding-top: .5rem;
     gap: 4rem;
+    line-height: 1.75;
     h1 {
         font-size: var(--text-heading-size);
         padding-bottom: .5rem;
@@ -18,7 +19,6 @@
         text-align: center;
         display: flex;
         flex-direction: column;
-        line-height: 125%;
     }
     &__platform {
         display: flex;
@@ -28,6 +28,12 @@
             display: flex;
             flex-direction: row;
             padding-bottom: 1rem;
+            p {
+                @include card-label;
+                line-height: 1;
+                display: grid;
+                place-items: center;
+            }
         }
         &--img {
             max-height: 7rem;
@@ -37,19 +43,24 @@
         &--text {
             padding-bottom: 1rem;
         }
+        &--name {
+            font-weight: 600;
+        }
         &--bottom {
             display: flex;
             justify-content: center;
             align-items: center;
         }
         &--button {
-            font-size: var(--text-small-size);
-            font-weight: 600;
-            width: 14rem;
-            padding: .25rem;
-            border: 1.5px solid $color-primary;
-            border-radius: .5rem;
-
+            @include button;
+        }
+    }
+    &__footer {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        &--button {
+            @include button;
         }
     }
 }
