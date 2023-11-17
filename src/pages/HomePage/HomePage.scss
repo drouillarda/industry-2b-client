@@ -23,4 +23,11 @@
   &__search {
     padding-bottom: 1rem;
   }
+  &__button {
+    @include button;
+  }
+  &__link {
+    width: fit-content;
+    margin: auto;
+  }
 }
