@@ -13,7 +13,7 @@ export const SearchResults = ({ query, titleList, handleAdd }) => {
             setResults(data);
         }
         searchTitles();
-    }, []);
+    }, [query]);
 
     return (
         <section className='searchResults'>

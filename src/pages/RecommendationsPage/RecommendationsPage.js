@@ -37,7 +37,7 @@ export function RecommendationsPage({ titleList }) {
             <div className="recommendations__platform">
                 {!!services.length &&(
                 services.map((service, index) =>
-                <div key={service.id}>
+                <div key={service.id} className="recommendations__platform--container">
                     <div className="recommendations__platform--top">
                         <p>#{index + 1}</p>
                         <img src={`${process.env.REACT_APP_BACKEND_URL}${service.logo}`} alt={service.name} className="recommendations__platform--img"/>
