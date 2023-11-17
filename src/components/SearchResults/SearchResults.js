@@ -4,7 +4,7 @@ import axios from 'axios';
 import { CardGrid } from '../CardGrid/CardGrid';
 import { Search } from '../../components/Search/Search';
 
-export const SearchResults = ({ query }) => {
+export const SearchResults = ({ query, titleList, handleAdd }) => {
     const [results, setResults] = useState([]);
 
     useEffect(() => {
@@ -23,6 +23,8 @@ export const SearchResults = ({ query }) => {
                 records={results}
                 titleField="title"
                 imageField="img"
+                titleList={titleList}
+                handleAddButton={handleAdd}
             />
         </section>
     );

@@ -1,6 +1,18 @@
 @use "../../styles/partials/variables" as *;
 @use "../../styles/partials/mixins" as *;
 
+@keyframes just-added {
+  0% {
+    scale: 1;
+  }
+  15% {
+    scale: 1.1;
+  }
+  100% {
+    scale: 1;
+  }
+}
+
 .card {
   display: flex;
   flex-direction: column;
@@ -25,7 +37,17 @@
   &--big &__subheading {
     @include heading;
   }
+  &--in-list {
+    filter: contrast(0.5);
+    animation-name: just-added;
+    animation-duration: 1s;
+  }
   &__add-button {
     align-self: flex-end;
+    transition: scale 0.1s ease-out;
+    &:hover {
+      scale: 1.1;
+      filter: brightness(1.2);
+    }
   }
 }

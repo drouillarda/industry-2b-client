@@ -1,9 +1,9 @@
 import "./Card.scss";
 import addIcon from "../../assets/images/add-to-cart.svg";
 
-export const Card = ({ title, backgroundUrl, description, handleAddButton, bigText }) => (
+export const Card = ({ title, backgroundUrl, description, handleAddButton, bigText, inList }) => (
   <article
-    className={`card ${bigText ? "card--big" : ""}`}
+    className={`card ${bigText ? "card--big" : ""} ${inList ? "card--in-list" : ""}`}
     style={backgroundUrl && { "--bg-image": `url("${backgroundUrl}")` }}
   >
     <button type="button" className="card__add-button" onClick={handleAddButton}>
