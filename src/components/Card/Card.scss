@@ -23,10 +23,15 @@
   border-radius: 5%;
   background-color: rgba($color-image-fallback, 83%);
   width: 100%;
+  cursor: pointer;
+  transition: filter 0.2s ease-out;
   @include tablet {
     padding: 1.5rem;
   }
 
+  &:hover {
+    outline: 2px solid $color-accent-tertiary;
+  }
   &__subheading {
     @include card-label;
     display: -webkit-box;
