@@ -4,19 +4,12 @@ import { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 
 export const MyList = ({ titleList, handleAdd }) => {
-    const [myList, setMyList] = useState([]);
-
-    console.log(myList);
-
-    useEffect(() => {
-        setMyList(JSON.parse(localStorage.getItem("titleList")));
-    }, []);
 
     return (
         <section className="myList">
             <CardGrid
                 heading="Your List"
-                records={myList}
+                records={titleList}
                 titleField="title"
                 imageField="img"
                 titleList={titleList}
