@@ -11,7 +11,7 @@
   background-size: cover;
   background-position: center;
   border-radius: 5%;
-  background-color: $color-image-fallback;
+  background-color: rgba($color-image-fallback, 83%);
 
   &__subheading {
     @include card-label;
