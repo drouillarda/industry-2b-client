@@ -27,7 +27,6 @@
     &--single {
       grid-template-columns: 1fr;
       max-width: calc($letter-width / 2);
-      gap: 6rem;
 
       @include tablet {
         max-width: calc($letter-width / 3);
@@ -37,9 +36,21 @@
         max-width: calc($letter-width / 4);
       }
     }
+
+    &--list {
+      grid-template-columns: 1fr;
+      max-width: calc($letter-width / 2);
+      gap: 6rem;
+
+      @include desktop {
+        max-width: $letter-width;
+        grid-template-columns: repeat(4, 1fr);
+        gap: $site-padding;
+      }
+    }
   }
 
   &__placeholder {
-    aspect-ratio:  27 / 40;
+    aspect-ratio: 27 / 40;
   }
 }

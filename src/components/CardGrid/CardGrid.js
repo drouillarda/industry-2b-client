@@ -20,7 +20,7 @@ export const CardGrid = ({ heading, records, titleField, imageField, handleAddBu
   return (
     <section className="grid">
       <h2 className="grid__heading">{heading}</h2>
-      <div className={`grid__grid ${records.length === 1 || heading === "Your List" ? "grid__grid--single" : ""}`}>
+      <div className={`grid__grid ${records.length === 1 ? "grid__grid--single" : ""} ${heading === "Your List" ? "grid__grid--list" : ""}`}>
         {records.map(record => <Card
           key={record.id}
           title={record[titleField]}
