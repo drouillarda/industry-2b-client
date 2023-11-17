@@ -31,7 +31,7 @@ export function RecommendationsPage({ titleList }) {
     return <main className="recommendations">
         <div className="recommendations__heading">
             <h1>Streamers for you</h1>
-            <p>Based on your selections we found these streamers have a lot of titles and genres you like</p>
+            <p>Based on your selections, we found these streamers have a lot of titles and genres you like.</p>
         </div>
             <article>
             <div className="recommendations__platform">
@@ -44,7 +44,7 @@ export function RecommendationsPage({ titleList }) {
                     </div>
                     <div className="recommendations__platform--text">
                         <p><span className="recommendations__platform--name">{service.name}</span> has <span className="recommendations__platform--name">{service.count}</span> of the titles you selected.</p>
-                        <p>Base pricing for ads plan is $5.99.</p>
+                        <p>The lowest subscription price is $5.99.</p>
                     </div>
                     <div className="recommendations__platform--bottom">
                     <button className="recommendations__platform--button">Sign up now</button>
