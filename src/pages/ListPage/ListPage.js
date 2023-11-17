@@ -1,12 +1,12 @@
 import './ListPage.scss';
 import { MyList } from './../../components/MyList/MyList';
 
-export const ListPage = ({ titleList, handleAddTitle }) => {
+export const ListPage = ({ titleList, handleAdd }) => {
     return (
         <main className="listpage">
             <MyList
                 titleList={titleList}
-                handleAddTitle={handleAddTitle}
+                handleAdd={handleAdd}
             />
         </main>
     )
