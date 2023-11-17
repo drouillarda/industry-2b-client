@@ -4,7 +4,7 @@ import { useEffect, useState } from 'react';
 import { CardGrid } from '../../components/CardGrid/CardGrid';
 import { Search } from '../../components/Search/Search';
 
-export function HomePage() {
+export function HomePage({ titleList, handleAdd }) {
     const [popularTitles, setPopularTitles] = useState([]);
 
     useEffect(() => {
@@ -26,6 +26,8 @@ export function HomePage() {
             records={popularTitles}
             titleField="title"
             imageField="img"
+            handleAddButton={handleAdd}
+            titleList={titleList}
         />
     </main>
 }

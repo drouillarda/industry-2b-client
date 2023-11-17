@@ -12,6 +12,12 @@
   }
 }
 
+@mixin letter {
+  max-width: $letter-width;
+  margin-left: auto;
+  margin-right: auto;
+}
+
 @mixin heading {
   font-size: var(--text-heading-size);
   font-weight: bold;
@@ -53,7 +59,7 @@
 @mixin button {
   border: 2px solid $color-primary;
   border-radius: 10px;
-  padding: 0.625rem;
+  padding: 0.625rem 1.25rem;
 
   &:hover,
   &--selected {

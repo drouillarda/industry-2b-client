@@ -1,10 +1,10 @@
 import './SearchResults.scss'
-import { Card } from '../Card/Card';
-import { CardGrid } from '../CardGrid/CardGrid';
 import { useEffect, useState } from 'react';
 import axios from 'axios';
+import { CardGrid } from '../CardGrid/CardGrid';
+import { Search } from '../../components/Search/Search';
 
-export const SearchResults = ({ query }) => {
+export const SearchResults = ({ query, titleList, handleAdd }) => {
     const [results, setResults] = useState([]);
 
     useEffect(() => {
@@ -17,18 +17,14 @@ export const SearchResults = ({ query }) => {
 
     return (
         <section className='searchResults'>
-            {/* <h1>Search Results</h1>
-            {results.map(result => <Card
-                key={result.id}
-                title={result.title}
-                bigText={true}
-                backgroundUrl={result.img}
-            />)} */}
+            <form className="searchResults__search" action="/search"><Search defaultValue={query} /></form>
             <CardGrid
                 heading="Search Results"
                 records={results}
                 titleField="title"
                 imageField="img"
+                titleList={titleList}
+                handleAddButton={handleAdd}
             />
         </section>
     );
